@@ -1,4 +1,0 @@
-#Fri Nov 25 11:49:51 BRT 2022
-base.0=/home/cristiano/Documents/Projects/Mestrado/Project/driveless/app_client/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
