@@ -53,7 +53,7 @@ class _CrawlerJoystickPageState extends State<CrawlerJoystickPage> {
                   Align(
                     alignment: const Alignment(0, 0.8),
                     child: Joystick(
-                      period: const Duration(milliseconds: 1000),
+                      period: const Duration(milliseconds: 125),
                       mode: JoystickMode.all,
                       listener: (details) {
                         setState(() {
