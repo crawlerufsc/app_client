@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
-
-import 'ui/joystick_page.dart';
+import 'package:flutter_webrtc/flutter_webrtc.dart';
+import 'ui/controller_page.dart';
+import 'package:flutter/foundation.dart'
+    show debugDefaultTargetPlatformOverride;
 
 void main() {
+  if (WebRTC.platformIsDesktop) {
+    debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  } else if (WebRTC.platformIsAndroid) {
+    WidgetsFlutterBinding.ensureInitialized();
+  }
   runApp(const CrawlerJoystickPageApp());
 }
 
@@ -19,7 +26,7 @@ class CrawlerJoystickPageApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Crawler Remote Controller'),
         ),
-        body: const CrawlerJoystickPage(),
+        body: const CrawlerControllerPage(),
       ),
     );
   }
